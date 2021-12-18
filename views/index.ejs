@@ -3,7 +3,7 @@
 <!-- /Include Header -->
 
 
-<div class="container pt-5">
+<div class="container pt-5 table-responsive">
     <table class="table">
         <thead class="table-dark">
           <tr>
@@ -23,7 +23,7 @@
                         <a href="/update-user?id=<%= users[i]._id %>" class="btn btn-secondary">
                             <i class="fa fa-edit"></i>
                         </a>
-                        <a href="/delete-user" class="btn btn-danger">
+                        <a class="btn btn-danger delete" data-id="<%= users[i]._id %>">
                             <i class="fa fa-trash-alt"></i>
                         </a>
                     </td>
