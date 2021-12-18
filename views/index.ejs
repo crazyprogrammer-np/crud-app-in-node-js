@@ -1,0 +1,38 @@
+<!-- Include Header -->
+<%- include('include/_header') %>
+<!-- /Include Header -->
+
+
+<div class="container pt-5">
+    <table class="table">
+        <thead class="table-dark">
+          <tr>
+              <th>SID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% for(var i=0; i<users.length; i++) { %>
+                <tr>
+                    <td><%= i+1 %></td>
+                    <td><%= users[i].name %></td>
+                    <td><%= users[i].email %></td>
+                    <td>
+                        <a href="/update-user?id=<%= users[i]._id %>" class="btn btn-secondary">
+                            <i class="fa fa-edit"></i>
+                        </a>
+                        <a href="/delete-user" class="btn btn-danger">
+                            <i class="fa fa-trash-alt"></i>
+                        </a>
+                    </td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</div>
+
+<!-- Include Footer -->
+<%- include('include/_footer') %>
+<!-- /Include Footer -->

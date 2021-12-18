@@ -1,0 +1,25 @@
+<!-- Include Header -->
+<%- include('include/_header') %>
+<!-- /Include Header -->
+
+<div class="container pt-4">
+    <h5 class="text-primary pb-3 text-center">Update Existing User</h5>
+    <form action="/api/users" method="post" id="update_user">
+        <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="hidden" name="id" value="<%= user._id %>">
+            <input type="text" class="form-control" id="name" name="name" placeholder="eg. john doe" value="<%= user.name %>">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="eg. example@domain.com" value="<%= user.email %>">
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary">Save Data</button>
+        </div>
+    </form>
+</div>
+
+<!-- Include Footer -->
+<%- include('include/_footer') %>
+<!-- /Include Footer -->
